@@ -9,6 +9,66 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = env("DATABASE_URL")  // La variabile .env sarà la stessa
+}
+
+model Pokemon {
+  id        Int      @id @default(autoincrement())
+  name      String
+  number    Int      @unique
+  types     Type[]   @relation("PokemonTypes")
+  abilities Ability[] @relation("PokemonAbilities")
+  evolvesFrom Evolution? @relation("PokemonEvolutionTo") // Pokémon da cui questo evolve
+  evolvesTo   Evolution? @relation("PokemonEvolutionFrom") // Pokémon in cui questo evolve
+  subtype       String?   // Sottotipo (es. Seed Pokémon)
+  height        Float?    // Altezza in metri
+  weight        Float?    // Peso in kg
+  description   String?   // Descrizione del Pokémon
+  hp            Int?
+  atk           Int?
+  def           Int?
+  spAtk         Int?
+  spDef         Int?
+  speed         Int?
+  firstAbility  Ability?  @relation("FirstAbility", fields: [firstAbilityId], references: [id])
+  firstAbilityId Int?
+  hiddenAbility Ability?  @relation("HiddenAbility", fields: [hiddenAbilityId], references: [id])
+  hiddenAbilityId Int?
+  learnSets     LearnSet[]
+}
+
+model Type {
+  id       Int      @id @default(autoincrement())
+  name     String   @unique
+  pokemons Pokemon[] @relation("PokemonTypes")
+}
+
+model Ability {
+  id       Int      @id @default(autoincrement())
+  name     String   @unique
+  pokemons Pokemon[] @relation("PokemonAbilities")
+  firstAbility   Pokemon[]   @relation("FirstAbility")  // Relazione inversa per firstAbility
+  hiddenAbility  Pokemon[]   @relation("HiddenAbility") // Relazione inversa per hiddenAbility
+  learnSets      LearnSet[]  // Relazione inversa per LearnSet
+}
+
+model Evolution {
+  id          Int     @id @default(autoincrement())
+  pokemonId   Int     @unique
+  evolvesInto Int     @unique
+  pokemon     Pokemon @relation("PokemonEvolutionFrom", fields: [pokemonId], references: [id])
+  evolvesTo   Pokemon @relation("PokemonEvolutionTo", fields: [evolvesInto], references: [id])
+}
+
+model LearnSet {
+  id          Int      @id @default(autoincrement())
+  level       Int? // Livello al quale l'abilità è appresa
+  tmTr        String? // TM/TR da cui l'abilità è appresa
+  tutor       Boolean? // Se l'abilità è imparata tramite move tutor
+  breeding    Boolean? // Se l'abilità è imparata tramite accoppiamento
+  pokemonId   Int
+  abilityId   Int
+  pokemon     Pokemon  @relation(fields: [pokemonId], references: [id])
+  ability     Ability  @relation(fields: [abilityId], references: [id])
 }
