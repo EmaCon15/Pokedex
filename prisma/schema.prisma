@@ -42,15 +42,27 @@ model Type {
   id       Int      @id @default(autoincrement())
   name     String   @unique
   pokemons Pokemon[] @relation("PokemonTypes")
+  moves    Move[] @relation("MoveTypes") // Relazione inversa per abilities
 }
 
 model Ability {
-  id       Int      @id @default(autoincrement())
-  name     String   @unique
-  pokemons Pokemon[] @relation("PokemonAbilities")
+  id             Int      @id @default(autoincrement())
+  name           String   @unique
+  description    String?  // Descrizione dell'abilità
+  pokemons       Pokemon[] @relation("PokemonAbilities")
   firstAbility   Pokemon[]   @relation("FirstAbility")  // Relazione inversa per firstAbility
   hiddenAbility  Pokemon[]   @relation("HiddenAbility") // Relazione inversa per hiddenAbility
-  learnSets      LearnSet[]  // Relazione inversa per LearnSet
+}
+
+model Move {
+  id            Int      @id @default(autoincrement())
+  name          String   @unique
+  description   String?  // Descrizione dell'abilità
+  power         Int?     // Potenza dell'abilità
+  accuracy      Int?     // Precisione dell'abilità
+  pp            Int?     // PP dell'abilità
+  types         Type[]   @relation("MoveTypes") // Relazione con i tipi
+  learnSets     LearnSet[]  // Relazione inversa per LearnSet
 }
 
 model Evolution {
@@ -68,7 +80,7 @@ model LearnSet {
   tutor       Boolean? // Se l'abilità è imparata tramite move tutor
   breeding    Boolean? // Se l'abilità è imparata tramite accoppiamento
   pokemonId   Int
-  abilityId   Int
+  moveId      Int
   pokemon     Pokemon  @relation(fields: [pokemonId], references: [id])
-  ability     Ability  @relation(fields: [abilityId], references: [id])
+  move        Move  @relation(fields: [moveId], references: [id])
 }
