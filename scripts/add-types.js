@@ -21,7 +21,8 @@ const types = [
     'Buio',
     'Folletto',
     'Speciale',
-    'Stato'
+    'Stato',
+    'Fisico'
 ];
 
 async function main() {
