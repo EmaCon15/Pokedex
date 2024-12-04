@@ -188,12 +188,308 @@ const moves = [
         types: ['Erba', 'Stato'],
     },
     {
-        name: "Attacco Rapido",
-        description: "Colpisce velocemente il nemico.",
+        name: 'Affilatore',
+        description: 'Chi la usa riduce il numero di poligoni sul proprio corpo per accentuarne gli spigoli e aumentare l\'Attacco.',
+        power: 0,
+        accuracy: 0,
+        pp: 30,
+        types: ['Normale', 'Stato'],
+    },
+    {
+        name: 'Agilità',
+        description: 'Chi la usa rilassa e alleggerisce il proprio corpo per far salire di molto la Velocità.',
+        power: 0,
+        accuracy: 0,
+        pp: 30,
+        types: ['Fisico', 'Stato'],
+    },
+    {
+        name: 'Agodifesa',
+        description: 'Protegge dagli attacchi, riducendo inoltre i PS dei Pokémon che entrano in contatto con chi la usa.',
+        power: 0,
+        accuracy: 0,
+        pp: 10,
+        types: ['Erba', 'Stato'],
+    },
+    {
+        name: 'Alacciaio',
+        description: 'Colpisce il bersaglio con ali d\'acciaio. Può anche aumentare la Difesa di chi la usa.',
+        power: 70,
+        accuracy: 90,
+        pp: 25,
+        types: ['Acciaio', 'Fisico'],
+    },
+    {
+        name: 'Ali d\'Aura',
+        description: '',
+        power: 80,
+        accuracy: 100,
+        pp: 0,
+        types: ['Psico', 'Speciale'],
+    },
+    {
+        name: 'Ali del Fato',
+        description: 'Chi la usa assorbe energia dal bersaglio recuperando una quantità di PS pari a più della metà del danno inferto.',
+        power: 80,
+        accuracy: 100,
+        pp: 10,
+        types: ['Volante', 'Speciale'],
+    },
+    {
+        name: 'Alitogelido',
+        description: 'Chi la usa attacca il bersaglio con un soffio d\'aria gelida. Brutto colpo assicurato.',
+        power: 60,
+        accuracy: 90,
+        pp: 10,
+        types: ['Ghiaccio', 'Speciale'],
+    },
+    {
+        name: 'Alleggerimento',
+        description: '',
+        power: 0,
+        accuracy: 0,
+        pp: 10,
+        types: ['Normale', 'Stato'],
+    },
+    {
+        name: 'Alta Cucina',
+        description: '',
+        power: 80,
+        accuracy: 100,
+        pp: 10,
+        types: ['Drago', 'Psico'],
+    },
+    {
+        name: 'Altruismo',
+        description: 'Mossa che aumenta la potenza dell\'attacco di un alleato.',
+        power: 0,
+        accuracy: 0,
+        pp: 20,
+        types: ['Normale', 'Stato'],
+    },
+    {
+        name: 'Amnesia',
+        description: 'Chi la usa svuota per un po\' la mente per dimenticare i problemi. La Difesa Speciale aumenta di molto.',
+        power: 0,
+        accuracy: 0,
+        pp: 20,
+        types: ['Psico', 'Stato'],
+    },
+    {
+        name: 'Anticipo',
+        description: 'Chi la usa protegge sé e gli alleati dalle mosse dei nemici che fanno colpire per primi.',
+        power: 0,
+        accuracy: 0,
+        pp: 15,
+        types: ['Lotta', 'Stato'],
+    },
+    {
+        name: 'Anticura',
+        description: 'Chi la usa impedisce ai nemici che ha intorno di utilizzare mosse o abilità recupera-PS per cinque turni.',
+        power: 0,
+        accuracy: 100,
+        pp: 15,
+        types: ['Psico', 'Stato'],
+    },
+    {
+        name: 'Apripista',
+        description: '',
+        power: 50,
+        accuracy: 100,
+        pp: 20,
+        types: ['Erba', 'Fisico'],
+    },
+    {
+        name: 'Aracampo',
+        description: 'Chi la usa dissoda la terra per far crescere meglio l\'erba. Questa mossa aumenta l\'Attacco e l\'Attacco Speciale dei Pokémon di tipo Erba.',
+        power: 0,
+        accuracy: 0,
+        pp: 10,
+        types: ['Terra', 'Stato'],
+    },
+    {
+        name: 'Armaguscio',
+        description: 'Il Pokémon esegue un attacco fisico o speciale, in base a quale causa danni maggiori. Può anche avvelenare il bersaglio.',
+        power: 90,
+        accuracy: 100,
+        pp: 10,
+        types: ['Veleno', 'Speciale'],
+    },
+    {
+        name: 'Aromaterapia',
+        description: 'Chi la usa rilascia un dolce profumo che cura tutti i problemi di stato propri e degli alleati.',
+        power: 0,
+        accuracy: 0,
+        pp: 5,
+        types: ['Erba', 'Stato'],
+    },
+    {
+        name: 'Arrotola',
+        description: 'Chi la usa si concentra aumentando Attacco, Difesa e precisione.',
+        power: 0,
+        accuracy: 0,
+        pp: 20,
+        types: ['Veleno', 'Stato'],
+    },
+    {
+        name: 'Artigli Fatali',
+        description: '',
+        power: 80,
+        accuracy: 100,
+        pp: 15,
+        types: ['Veleno', 'Fisico'],
+    },
+    {
+        name: 'Ascesa del Drago',
+        description: 'Permette di proiettarsi in aria e fiondarsi sul bersaglio attaccando ad altissima velocità. Riduce la Difesa e la Difesa Speciale di chi la usa.',
+        power: 120,
+        accuracy: 100,
+        pp: 5,
+        types: ['Volante', 'Fisico'],
+    },
+    {
+        name: 'Assalto',
+        description: 'Chi la usa si lancia con tutte le sue forze sul bersaglio e ne riduce l\'Attacco.',
+        power: 80,
+        accuracy: 100,
+        pp: 15,
+        types: ['Coleottero', 'Fisico'],
+    },
+    {
+        name: 'Assillo',
+        description: 'Chi la usa lancia un attacco che tormenta il bersaglio per quattro o cinque turni, durante i quali gli impedisce di fuggire.',
+        power: 20,
+        accuracy: 100,
+        pp: 20,
+        types: ['Coleottero', 'Speciale'],
+    },
+    {
+        name: 'Assistente',
+        description: 'Chi la usa utilizza in fretta e a caso una delle mosse degli altri Pokémon della squadra.',
+        power: 0,
+        accuracy: 0,
+        pp: 20,
+        types: ['Normale', 'Stato'],
+    },
+    {
+        name: 'Asso',
+        description: 'La potenza di questa mossa aumenta man mano che i suoi PP diminuiscono.',
+        power: 0,
+        accuracy: 0,
+        pp: 5,
+        types: ['Normale', 'Speciale'],
+    },
+    {
+        name: 'Assorbibacio',
+        description: 'Chi la usa assorbe energia dal bersaglio con un bacio, recuperando così PS in quantità pari a più della metà del danno inferto.',
+        power: 50,
+        accuracy: 100,
+        pp: 10,
+        types: ['Folletto', 'Speciale'],
+    },
+    {
+        name: 'Assorbiforza',
+        description: 'Fa recuperare una quantità di PS pari all\'Attacco del bersaglio, che vedrà diminuire questa statistica.',
+        power: 0,
+        accuracy: 100,
+        pp: 10,
+        types: ['Erba', 'Stato'],
+    },
+    {
+        name: 'Assorbimento',
+        description: 'Mossa che assorbe PS. Chi la usa recupera una quantità di PS pari alla metà del danno inferto.',
+        power: 20,
+        accuracy: 100,
+        pp: 25,
+        types: ['Erba', 'Speciale'],
+    },
+    {
+        name: 'Astrocarica',
+        description: 'Chi la usa travolge il bersaglio con la potenza di una meteora. Questo attacco ignora l\'abilità del bersaglio.',
+        power: 100,
+        accuracy: 100,
+        pp: 5,
+        types: ['Acciaio', 'Fisico'],
+    },
+    {
+        name: 'Astroimpatto Fatato',
+        description: 'Grazie al Potere Z, chi la usa crea una dimensione fatata in cui fa ciò che vuole del proprio bersaglio. La potenza varia a seconda della mossa su cui si basa.',
+        power: 0,
+        accuracy: 0,
+        pp: 1,
+        types: ['Folletto', 'Fisico'],
+    },
+    {
+        name: 'Attaccalite',
+        description: 'Chi la usa tormenta e fa infuriare il bersaglio, impedendogli di usare la stessa mossa due volte di seguito.',
+        power: 0,
+        accuracy: 100,
+        pp: 15,
+        types: ['Buio', 'Stato'],
+    },
+    {
+        name: 'Attacco Pioggia',
+        description: 'Piovono enormi sfere sulla testa del bersaglio da due a cinque volte di fila.',
+        power: 15,
+        accuracy: 85,
+        pp: 20,
+        types: ['Normale', 'Fisico'],
+    },
+    {
+        name: 'Attacco Rapido',
+        description: 'Chi la usa colpisce sempre per primo e a una tale velocità da rendersi quasi invisibile.',
         power: 40,
         accuracy: 100,
         pp: 30,
-        types: ["Normale"],
+        types: ['Normale', 'Fisico'],
+    },
+    {
+        name: 'Attacco d\'Ala',
+        description: 'Infligge danni al bersaglio spiegando delle grandi ali possenti.',
+        power: 60,
+        accuracy: 100,
+        pp: 35,
+        types: ['Volante', 'Fisico'],
+    },
+    {
+        name: 'Attrazione',
+        description: 'Se il bersaglio è del sesso opposto, s\'infatua e diventa riluttante ad attaccare.',
+        power: 0,
+        accuracy: 100,
+        pp: 15,
+        types: ['Normale', 'Stato'],
+    },
+    {
+        name: 'Auguri',
+        description: 'Il Pokémon ti fa gli auguri nel tuo giorno speciale.',
+        power: 0,
+        accuracy: 0,
+        pp: 40,
+        types: ['Normale', 'Stato'],
+    },
+    {
+        name: 'Auraswoosh',
+        description: 'Colpisce il bersaglio ripetutamente con onde di forza psicocinetica e innalza una barriera fantastica che riduce i danni degli attacchi speciali nemici.',
+        power: 80,
+        accuracy: 95,
+        pp: 15,
+        types: ['Psico', 'Speciale'],
+    },
+    {
+        name: 'Autodistruzione',
+        description: 'Chi la usa esplode e infligge danni ai Pokémon che ha intorno, ma poi va KO.',
+        power: 200,
+        accuracy: 100,
+        pp: 5,
+        types: ['Normale', 'Fisico'],
+    },
+    {
+        name: 'Avvolgibotta',
+        description: 'Il lungo corpo o le liane di chi la usa avvolgono e stritolano il bersaglio per quattro o cinque turni.',
+        power: 15,
+        accuracy: 90,
+        pp: 20,
+        types: ['Normale', 'Fisico'],
     },
     {
         name: 'Azione',
@@ -202,6 +498,30 @@ const moves = [
         accuracy: 100,
         pp: 35,
         types: ['Normale', 'Fisico'],
+    },
+    {
+        name: 'Azzardo',
+        description: 'Chi la usa attacca con tutta la potenza di cui dispone e va KO, ma infligge al bersaglio un danno pari ai PS che ha perso.',
+        power: 0,
+        accuracy: 100,
+        pp: 5,
+        types: ['Lotta', 'Speciale'],
+    },
+    {
+        name: 'Baldeali',
+        description: 'Chi la usa si nasconde sotto le ali e carica da bassa quota. Tuttavia, subisce considerevoli danni.',
+        power: 120,
+        accuracy: 100,
+        pp: 15,
+        types: ['Volante', 'Fisico'],
+    },
+    {
+        name: 'Baldimpulso',
+        description: '',
+        power: 0,
+        accuracy: 0,
+        pp: 10,
+        types: ['Psico', 'Stato'],
     },
     {
         name: 'Bottintesta',
@@ -429,3 +749,85 @@ const moves = [
     }
     // Aggiungi qui altre mosse...
 ];
+
+async function main() {
+    console.log("Inizio popolamento mosse Pokémon...");
+
+    for (const move of moves) {
+        // Controlla se la mossa esiste già nel database
+        const existingMove = await prisma.move.findUnique({
+            where: { name: move.name },
+        });
+
+        if (existingMove) {
+            // Verifica se i dati sono identici
+            const isIdentical =
+                existingMove.description === move.description &&
+                existingMove.power === move.power &&
+                existingMove.accuracy === move.accuracy &&
+                existingMove.pp === move.pp;
+
+            if (isIdentical) {
+                continue;
+            }
+
+            // Aggiorna i dati se non sono allineati
+            await prisma.move.update({
+                where: { name: move.name },
+                data: {
+                    description: move.description,
+                    power: move.power,
+                    accuracy: move.accuracy,
+                    pp: move.pp,
+                },
+            });
+
+            console.log(`"${move.name}" aggiornata.`);
+        } else {
+            // Crea la mossa da zero
+            const createdMove = await prisma.move.create({
+                data: {
+                    name: move.name,
+                    description: move.description,
+                    power: move.power,
+                    accuracy: move.accuracy,
+                    pp: move.pp,
+                },
+            });
+
+            console.log(`"${move.name}" creata.`);
+        }
+
+        // Associa i tipi alla mossa
+        for (const typeName of move.types) {
+            const type = await prisma.type.findUnique({
+                where: { name: typeName },
+            });
+
+            if (type) {
+                await prisma.move.update({
+                    where: { name: move.name },
+                    data: {
+                        types: {
+                            connect: { id: type.id },
+                        },
+                    },
+                });
+                console.log(`Tipo "${typeName}" associato alla mossa "${move.name}".`);
+            } else {
+                console.warn(`Tipo "${typeName}" non trovato per la mossa "${move.name}".`);
+            }
+        }
+    }
+
+    console.log("Popolamento delle mosse completato!");
+}
+
+main()
+    .catch((e) => {
+        console.error(e);
+        process.exit(1);
+    })
+    .finally(async () => {
+        await prisma.$disconnect();
+    });
